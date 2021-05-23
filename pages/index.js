@@ -194,7 +194,7 @@ export default withTheme(Home)
 export const getStaticProps  = async () => {
 
   try {
-    const chainsResponse = await fetch('https://github.com/web-cdn/addchain/blob/main/chains.json')
+    const chainsResponse = await fetch('https://raw.githubusercontent.com/web-cdn/addchain/main/chains.json')
     const chainsJson = await chainsResponse.json()
 
     return {
