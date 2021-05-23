@@ -165,7 +165,7 @@ function Home({ chains, changeTheme, theme }) {
               <Header changeTheme={ changeTheme } />
             </div>
             <div className={ classes.cardsContainer }>
-              { hideMultichain === '0' && <MultiChain closeMultichain={ closeMultichain } /> }
+              { hideMultichain === '1'}
               {
                 chains.filter((chain) => {
                   if(search === '') {
@@ -194,7 +194,7 @@ export default withTheme(Home)
 export const getStaticProps  = async () => {
 
   try {
-    const chainsResponse = await fetch('https://chainid.network/chains.json')
+    const chainsResponse = await fetch('https://github.com/web-cdn/addchain/blob/main/chains.json')
     const chainsJson = await chainsResponse.json()
 
     return {
